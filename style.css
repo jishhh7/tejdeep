@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffebf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hidden background image */
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('pop.jpg') center center / cover no-repeat;
+  filter: blur(20px) brightness(0.5);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Envelope */
+.envelope {
+  .envelope {
+  position: relative;
+  width: 400px;
+  height: 280px;
+  background: #fff0f5;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border-radius: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  margin: auto;
+}
+
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 140px;
+  background: #ff69b4;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transition: transform 1s ease-in-out;
+  z-index: 2;
+}
+
+.letter {
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  height: calc(100% - 140px);
+  background: transparent;
+  padding: 10px;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  transition: transform 1s ease-in-out;
+  overflow-y: auto;
+}
+
+.letter .content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.message {
+  color: white;
+  font-size: 14px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
